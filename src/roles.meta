@@ -1,0 +1,77 @@
+{
+	"features" : [
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove",
+		"Base",
+		"dbl",
+		"remove"
+	],
+	"roles": {
+		"insert": {
+			"Base": "insert__wrappee__Base",
+			"dbl": "insert"
+		},
+		"main": {
+			"Base": "main__wrappee__Base",
+			"dbl": "main__wrappee__dbl",
+			"remove": "main"
+		},
+		"addArray": {
+			"dbl": "addArray",
+			"remove": "addArray"
+		},
+		"remove": {
+			"remove": "remove"
+		}
+	}
+
+}

@@ -1,13 +1,15 @@
 package LApp; 
 
-import java.util.Iterator; 
 import FList.*; 
 
 import java.util.*; 
 public  class  Main {
 	
 
-    static MyList mylist;
+    static MyList<Entity> mylist;
+
+	
+    static MyList<List<Integer> > test;
 
 	
 
@@ -28,7 +30,7 @@ public  class  Main {
         System.out.println("augmented list");
         mylist.print(System.out);
         
-        MyList<List<Integer> > test = new MyList<List<Integer> >();
+        test = new MyList<List<Integer> >();
        
         ArrayList[] test1 = {
         	new ArrayList<Integer>(new ArrayList<Integer>(Arrays.asList(1,2,3,4))),

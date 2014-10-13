@@ -1,7 +1,5 @@
 package FList;
 
-import LApp.Entity;
-
 public class MyNode<T> {
 
     T elem;

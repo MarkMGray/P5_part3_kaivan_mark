@@ -1,13 +1,12 @@
 package LApp; 
 
-import java.util.Iterator; 
 import FList.*; 
 
 import java.util.*; 
 public  class  Main {
 	
 
-    static MyList mylist;
+    static MyList<Entity> mylist;
 
 	
 

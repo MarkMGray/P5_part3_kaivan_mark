@@ -1,6 +1,10 @@
 package LApp;
 
+
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+
 import FList.*;
 import LApp.Entity;
 
@@ -26,6 +30,16 @@ public class Main {
         //Step 6: print remaining nodes
         System.out.println("revised list");
         mylist.print(System.out);
+        
+        
+        for(Iterator i = test.iterator(); i.hasNext();){
+			ArrayList<Integer> obj = (ArrayList) i.next();
+			if(obj.get(0).intValue() % 2 == 0)
+				i.remove();
+		}
+		System.out.println("removed starting with even nums");
+        test.print(System.out);
+        
     }
 
     public static void addArray(MyList l, Entity[] arr) {

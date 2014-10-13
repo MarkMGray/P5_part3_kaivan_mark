@@ -11,7 +11,6 @@ import org.junit.Test;
 import FList.MyList;
 import LApp.Entity;
 import LApp.Main;
-import java.util.*;
 public class TestCases {
 	@Test
 	public void removeNodesTest() {

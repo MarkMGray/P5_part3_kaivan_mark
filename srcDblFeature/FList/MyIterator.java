@@ -1,12 +1,11 @@
 package FList; 
 
 import java.util.Iterator; 
-import LApp.Entity; 
 
-public  class  MyIterator  implements Iterator {
+public  class  MyIterator <T>  implements Iterator {
 	
 
-    MyNode current;
+    MyNode<T> current;
 
 	
     MyList list;
@@ -34,7 +33,7 @@ public  class  MyIterator  implements Iterator {
 
 	
 
-    public Entity next() {
+    public T next() {
         if (alreadyAdvanced) {
             alreadyAdvanced = false;
         } else {

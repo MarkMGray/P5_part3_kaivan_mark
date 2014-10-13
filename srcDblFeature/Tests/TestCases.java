@@ -14,7 +14,7 @@ public   class  TestCases {
 
 	@Test
 	public void addNodesToListTest() {
-		MyList myList = new MyList();
+		MyList myList = new MyList<Entity>();
 		Main.addArray(myList, Entity.entArray1);
 		boolean pass = true;
 		Entity[] ent = Entity.entArray1;

@@ -2,8 +2,7 @@ package FList;
 
 import java.util.Iterator; 
 
-
-public   class  MyIterator <T>  implements Iterator {
+public  class  MyIterator <T>  implements Iterator {
 	
 
     MyNode<T> current;
@@ -44,12 +43,9 @@ public   class  MyIterator <T>  implements Iterator {
     }
 
 	
-    public void remove  () {
-    	MyNode newCurrent;
-    	newCurrent = current.right;
-    	list.delete(current);
-    	current = newCurrent;
-    	alreadyAdvanced = true;
+
+    public void remove() {
+    	// Not implemented for Base Class
     }
 
 

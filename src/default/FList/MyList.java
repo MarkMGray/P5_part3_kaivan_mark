@@ -3,18 +3,16 @@ import java.io.PrintStream;
 
 import java.util.Iterator; 
 
-public   class  MyList <T>  implements Iterable {
+public  class  MyList <T>  implements Iterable {
 	
 
     MyNode head;
 
 	
-	
-	public MyList  () {
+
+    public MyList() {
         head = null;
-    
-		tail = null;
-	}
+    }
 
 	
 
@@ -24,20 +22,10 @@ public   class  MyList <T>  implements Iterable {
 
 	
 
-     private void  insert__wrappee__Base  (MyNode n) {
+    void insert(MyNode n) {
         n.right = head;
         head = n;
     }
-
-	
-	
-	void insert(MyNode n) {
-	     insert__wrappee__Base(n);
-	     n.left = null;
-	     if (n.right != null) {
-	    	 n.right.left = n;
-	     }
-	}
 
 	
 
@@ -54,25 +42,6 @@ public   class  MyList <T>  implements Iterable {
             out.println(e);
         }
     }
-
-	
-
-	MyNode tail;
-
-	
-	
-	public void delete(MyNode n) {
-		if (n.left != null) {
-			n.left.right = n.right;
-		} else {
-			head = n.right;
-		}
-		if (n.right != null) {
-			n.right.left = n.left;
-		} else {
-			tail = n.left;
-		}
-	}
 
 
 }

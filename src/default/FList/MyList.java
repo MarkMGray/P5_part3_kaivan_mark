@@ -1,9 +1,9 @@
 package FList; 
 import java.io.PrintStream; 
-import LApp.Entity; 
+
 import java.util.Iterator; 
 
-public   class  MyList  implements Iterable {
+public   class  MyList <T>  implements Iterable {
 	
 
     MyNode head;
@@ -18,7 +18,7 @@ public   class  MyList  implements Iterable {
 
 	
 
-    public void insert(Entity elem) {
+    public void insert(T elem) {
         insert(new MyNode(elem));
     }
 
@@ -50,7 +50,7 @@ public   class  MyList  implements Iterable {
     public void print(PrintStream out) {
         for (Iterator eIterator = iterator(); 
 		eIterator.hasNext();) {
-            Entity e = (Entity) eIterator.next();
+            T e = (T) eIterator.next();
             out.println(e);
         }
     }

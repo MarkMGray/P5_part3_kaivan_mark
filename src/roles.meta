@@ -71,6 +71,10 @@
 		},
 		"remove": {
 			"remove": "remove"
+		},
+		"printMe": {
+			"Base": "printMe__wrappee__Base",
+			"Cruel": "printMe"
 		}
 	}
 

@@ -2,12 +2,12 @@ package FList;
 
 import LApp.Entity;
 
-public class MyNode {
+public class MyNode<T> {
 
-    Entity elem;
+    T elem;
     MyNode right;
 
-    public MyNode(Entity elem) {
+    public MyNode(T elem) {
         this.elem = elem;
         right = null;
     }

@@ -5,7 +5,7 @@ import FList.*;
 
 public class Main {
 
-    static MyList mylist;
+    static MyList<Entity> mylist;
 
     public static void main(String[] args) {
         original(args);

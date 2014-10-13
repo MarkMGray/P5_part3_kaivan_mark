@@ -14,11 +14,11 @@ import LApp.Main;
 public class TestCases {
 	@Test
 	public void removeNodesTest() {
-		MyList myList = new MyList<Entity>();
+		MyList<Entity> myList = new MyList<Entity>();
 		Main.addArray(myList, Entity.entArray1);
 		Main.addArray(myList, Entity.entArray2);
 		Entity[] ent2 = Entity.entArray2;
-		for (Iterator i = myList.iterator(); i.hasNext();) {
+		for (Iterator<Entity> i = myList.iterator(); i.hasNext();) {
 			Entity x = (Entity) i.next();
 			for (int j = 0; j < ent2.length; j++) {
 				if (ent2[j] == x) {
@@ -32,7 +32,7 @@ public class TestCases {
 		Entity[] ent = Entity.entArray1;
 		for (int j=0; j<ent.length; j++) {
 			entityPresent = false;
-			for (Iterator i = myList.iterator(); i.hasNext();) {
+			for (Iterator<Entity> i = myList.iterator(); i.hasNext();) {
 				Entity x = (Entity) i.next();
 				if (ent[j] == x) {
 					entityPresent = true;
@@ -45,7 +45,7 @@ public class TestCases {
 		}
 		for (int j=0; j<ent2.length; j++) {
 			entityPresent = false;
-			for (Iterator i = myList.iterator(); i.hasNext();) {
+			for (Iterator<Entity> i = myList.iterator(); i.hasNext();) {
 				Entity x = (Entity) i.next();
 				if (ent2[j] == x) {
 					entityPresent = true;
@@ -65,7 +65,7 @@ public class TestCases {
 	
 	@Test
 	public void removeGenericNodeTest(){
-		MyList myList = new MyList<ArrayList<Integer> >();
+		MyList<ArrayList<Integer> > myList = new MyList<ArrayList<Integer> >();
 		
 		ArrayList[] test1 = {
 	        	new ArrayList<Integer>(new ArrayList<Integer>(Arrays.asList(1,2,3,4))),
@@ -79,14 +79,14 @@ public class TestCases {
     		myList.insert(test1[j]);
     	}
 		
-		for(Iterator i = myList.iterator(); i.hasNext();){
+		for(Iterator<ArrayList<Integer> > i = myList.iterator(); i.hasNext();){
 			ArrayList<Integer> obj = (ArrayList) i.next();
 			if(obj.get(0).intValue() % 2 == 0)
 				i.remove();
 		}
 		
 		boolean pass = true;
-		for(Iterator i = myList.iterator(); i.hasNext();){
+		for(Iterator<ArrayList<Integer> > i = myList.iterator(); i.hasNext();){
 			ArrayList<Integer> obj = (ArrayList) i.next();
 			if(obj.get(0).intValue() % 2 == 0)
 				pass = false;
@@ -102,12 +102,12 @@ public class TestCases {
 	
 	@Test
 	public void removeAllNodesTest() {
-		MyList myList = new MyList();
+		MyList<Entity> myList = new MyList<Entity>();
 		Main.addArray(myList, Entity.entArray1);
 		Main.addArray(myList, Entity.entArray2);
 		Entity[] ent2 = Entity.entArray2;
 		Entity[] ent1 = Entity.entArray1;
-		for (Iterator i = myList.iterator(); i.hasNext();) {
+		for (Iterator<Entity> i = myList.iterator(); i.hasNext();) {
 			Entity x = (Entity) i.next();
 			for (int j = 0; j < ent2.length; j++) {
 				if (ent2[j] == x) {
@@ -126,7 +126,7 @@ public class TestCases {
 		boolean entityPresent;
 		for (int j=0; j<ent2.length; j++) {
 			entityPresent = false;
-			for (Iterator i = myList.iterator(); i.hasNext();) {
+			for (Iterator<Entity> i = myList.iterator(); i.hasNext();) {
 				Entity x = (Entity) i.next();
 				if (ent2[j] == x) {
 					entityPresent = true;
@@ -139,7 +139,7 @@ public class TestCases {
 		}
 		for (int j=0; j<ent1.length; j++) {
 			entityPresent = false;
-			for (Iterator i = myList.iterator(); i.hasNext();) {
+			for (Iterator<Entity> i = myList.iterator(); i.hasNext();) {
 				Entity x = (Entity) i.next();
 				if (ent1[j] == x) {
 					entityPresent = true;
